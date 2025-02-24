@@ -3,6 +3,7 @@ const app = express()
 const bookrouter = require('./router/book')
 const categoryrouter = require('./router/categories')
 const userRoutesrouter = require('./router/userRoutes')
+const loansrouter = require('./router/loans')
 
 const port = 3000
 
@@ -16,6 +17,7 @@ app.get('/', (req, res) => {
 app.use(bookrouter)
 app.use(categoryrouter)
 app.use(userRoutesrouter)
+app.use(loansrouter)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
