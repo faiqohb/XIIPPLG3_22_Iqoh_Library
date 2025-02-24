@@ -19,7 +19,7 @@ const createnew = (body) => {
    return dbPool.execute(SQLQuery);
 }
 
-const updateUser = (body, id) => {
+const updateBook = (body, id) => {
     const SQLQuery = `UPDATE book 
                      SET title='${body.title}', 
                         writer='${body.writer}',
@@ -31,7 +31,7 @@ const updateUser = (body, id) => {
     return dbPool.execute(SQLQuery);
 }
 
-const deleteUser = (id) => {
+const deleteBook = (id) => {
     const SQLQuery= `DELETE FROM book WHERE id=${id}`;
 
     return dbPool.execute(SQLQuery);
@@ -40,7 +40,7 @@ const deleteUser = (id) => {
 module.exports = {
     getindex,
     createnew,
-    updateUser,
-    deleteUser,
+    updateBook,
+    deleteBook,
     getByid,
 }
